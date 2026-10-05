@@ -1,0 +1,123 @@
+* {
+  box-sizing: border-box;
+}
+
+/* display を指定した要素でも hidden 属性で確実に隠す */
+[hidden] {
+  display: none !important;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background: #f2f4f7;
+  color: #222;
+  font-family: "Hiragino Sans", "Yu Gothic UI", "Meiryo", sans-serif;
+}
+
+.card {
+  width: 100%;
+  max-width: 560px;
+  padding: 32px 24px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+  margin: 0 0 24px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.progress {
+  margin: 0 0 8px;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.question {
+  margin: 0 0 20px;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.choices {
+  display: grid;
+  gap: 10px;
+}
+
+.choice-button {
+  padding: 14px 16px;
+  border: 2px solid #93c5fd;
+  border-radius: 8px;
+  background: #eff6ff;
+  color: #1e3a8a;
+  font-size: 1rem;
+  text-align: left;
+  cursor: pointer;
+}
+
+.choice-button:hover:not(:disabled) {
+  border-color: #3b82f6;
+  background: #dbeafe;
+}
+
+.choice-button:disabled {
+  cursor: default;
+}
+
+.choice-button.correct {
+  border-color: #16a34a;
+  background: #dcfce7;
+}
+
+.choice-button.wrong {
+  border-color: #dc2626;
+  background: #fee2e2;
+}
+
+.feedback {
+  min-height: 1.5em;
+  margin: 20px 0 0;
+  font-weight: bold;
+}
+
+.feedback.correct {
+  color: #16a34a;
+}
+
+.feedback.wrong {
+  color: #dc2626;
+}
+
+.primary-button {
+  display: block;
+  width: 100%;
+  margin-top: 16px;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  background: #3b82f6;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.primary-button:hover {
+  background: #2563eb;
+}
+
+#result-screen {
+  text-align: center;
+}
+
+.score {
+  margin: 16px 0;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
